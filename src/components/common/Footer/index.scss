@@ -1,0 +1,29 @@
+footer {
+    margin: 50px 0 0;
+    padding: 20px 0 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #737573;
+    border-top: 1px solid #e2e2e2;
+
+    .desc {
+        span {
+            color:black;
+        }
+    }
+
+    .group {
+        word-spacing:3px;
+        font-size:14px;
+        color:#333;
+    }
+
+    .suport {
+        img{
+        height:30px;
+        width:30px;
+        position: relative;
+        top:7px;
+        }
+    }
+}

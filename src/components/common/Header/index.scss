@@ -1,0 +1,228 @@
+
+@import "@/assets/styles/global.scss";
+.header {
+  border: none;
+  color: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  transition: none;
+  width: 100%;
+  height: 60px;
+  z-index: 10;
+
+  .left {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: 400;
+    box-sizing: border-box;
+    font-size: 30px;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .right {
+    padding-right: 45px;
+    box-sizing: border-box;
+    height: 60px;
+    line-height: 60px;
+    opacity: 1;
+    display: flex;
+    font-weight: 500;
+    justify-content: flex-end;
+
+    #header-ul {
+      height: 60px;
+      padding: 0px;
+      display: flex;
+      justify-content: flex-end;
+
+      .hot {
+        color: red;
+        font-size: 22px;
+        font-weight: 500;
+      }
+
+      li {
+        float: left;
+        height: 60px;
+        padding-left: 15px;
+        padding-right: 15px;
+        line-height: 60px;
+        list-style: none;
+        opacity: 0.8;
+        cursor: pointer;
+        font-size: 18px;
+        @include transition(0.35s);
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      #user {
+        padding: 0px;
+        border-radius: 50%;
+        width: 40px;
+        margin-top: 10px;
+        opacity: 1;
+        height: 40px;
+        position: relative;
+        @include transition(0.35s);
+
+        .user_default_head {
+          width: 100%;
+          height: 100%;
+        }
+
+        .nobodyLoginBox {
+          position: absolute;
+          width: 180px;
+          border-radius: 6px;
+          height: 90px;
+          background: white;
+          box-shadow: 0 4px 8px rgba(7, 17, 27, 0.7);
+          color: black;
+          top: 50px;
+          right: -15px;
+          opacity: 1;
+          @include transition(0s);
+
+          .title {
+            height: 40px;
+            width: 100%;
+            text-align: center;
+            line-height: 40px;
+          }
+
+          .btnBox {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            #loginBtn {
+              flex: 1;
+              opacity: 1;
+              text-align: right;
+              color: green;
+              &:hover {
+                opacity: 1;
+              }
+            }
+            #registerBtn {
+              flex: 1;
+              opacity: 0.7;
+              text-align: left;
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        .managerLoginBox,
+        .userLoginBox {
+          position: absolute;
+          width: 180px;
+          border-radius: 6px;
+          min-height: 145px;
+          background: white;
+          box-shadow: 0 4px 8px rgba(7, 17, 27, 0.7);
+          color: black;
+          top: 50px;
+          right: -15px;
+          opacity: 1;
+          @include transition(0s);
+
+          .title {
+            height: 43px;
+            width: 100%;
+            text-align: center;
+            line-height: 40px;
+            font-size: 18px;
+            border-bottom: 1px solid white;
+            padding-left: 20px;
+            box-sizing: border-box;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+            .head {
+              height: 40px;
+              width: 40px;
+              border-radius: 50%;
+              overflow: hidden;
+              float: left;
+              img {
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+              }
+            }
+          }
+
+          .body {
+            min-height: 140px;
+            width: 100%;
+            box-sizing: border-box;
+            div {
+              height: 25px;
+              text-indent: 20px;
+              line-height: 25px;
+
+              &:hover {
+                background: black;
+                color: white;
+              }
+            }
+            #quit {
+              color: red;
+            }
+          }
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.header-init {
+  border: none !important;
+  background: transparent !important;
+}
+
+.header-active {
+  background: white !important;
+  color: black !important;
+  opacity: 0.9 !important;
+  box-shadow: 0 4px 8px rgba(7, 17, 27, 0.2) !important;
+}
+
+@media screen and(max-width: $sm) {
+  .header {
+    .left {
+      font-size: px2rem(20);
+    }
+    .right {
+      padding-right: 10px;
+
+      #header-ul {
+        .hot {
+          font-size: px2rem(18);
+        }
+
+        li {
+          font-size: px2rem(14);
+          padding-left: 4px;
+          padding-right: 4px;
+        }
+
+        #user {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
+  }
+}

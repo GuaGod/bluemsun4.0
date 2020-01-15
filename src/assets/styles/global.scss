@@ -1,0 +1,49 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 微软雅黑;
+}
+
+ul {
+    list-style:none;
+}
+
+li {
+    list-style:none;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
+
+a:active {
+    text-decoration:none;
+    color:inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color:inherit;
+}
+
+html, body {
+    background: #f2f2f2;
+}
+
+@mixin transition($time) {
+    -webkit-transition: all $time linear;
+    -moz-transition: all $time linear;
+    -o-transition: all $time linear;
+    transition: all $time linear;
+}
+
+$ratio: 375 / 10;
+
+@function px2rem($px) {
+   @return $px / $ratio + rem;
+}
+
+$sm: 750px;
+$md: 970px;
+$lg: 1170px;
