@@ -1,0 +1,21 @@
+.container {
+    min-height: 50px;
+    box-shadow: 0 4px 8px rgba(7, 17, 27, 0.2);
+    background-color: #fff;
+    margin-top: 0px;
+        .title {
+            position: relative;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 15px;
+            border-bottom: 3px dotted #E9E9E9;
+            color: #333;
+            border-radius: 2px 2px 0 0;
+            font-size: 16px;
+        }
+        .list_container {
+            margin: 0;
+            padding: 0;
+            min-height: 300px;
+        }
+}

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <my-header :state="headerState"></my-header>
+    <my-header :state="headerState" :hasSwitch="true"></my-header>
     <banner></banner>
     <production></production>
         <blog></blog>

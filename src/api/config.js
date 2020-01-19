@@ -3,8 +3,8 @@ let config = null;
 
 if(mode === 'production') {
     config = {
-        remote: 'https://www.steins.club',
-        port: 443,
+        remote: 'http://www.bluemsun.work',
+        port: 8080,
     }
 }
 

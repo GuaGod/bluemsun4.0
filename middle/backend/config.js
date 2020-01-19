@@ -1,4 +1,4 @@
 module.exports = {
-    remote: 'https://www.steins.club',
-    port: 443,
+    remote: 'http://www.bluemsun.work',
+    port: 8080,
 }

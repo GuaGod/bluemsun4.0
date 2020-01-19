@@ -8,5 +8,5 @@
 </template>
 
 
-<script src="./index.js"></script>
-<style lang="scss" scoped src="./index.scss"></style>
+<script src="./Footer.js"></script>
+<style lang="scss" scoped src="./Footer.scss"></style>

@@ -8,5 +8,5 @@
   </div>
 </template>
 
-<script src="./index.js"></script>
-<style lang="scss" scoped src="./index.scss"></style>
+<script src="./UnLoginMenu.js"></script>
+<style lang="scss" scoped src="./UnLoginMenu.scss"></style>

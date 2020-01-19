@@ -1,0 +1,33 @@
+.hotBlog_container {
+    height: 300px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(7, 17, 27, 0.2);
+    margin-left: 10px;
+
+    .title {
+        position: relative;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 15px;
+        border-bottom: 3px dotted #E9E9E9;
+        color: #333;
+        border-radius: 2px 2px 0 0;
+        font-size: 16px;
+    }
+
+    .list_container {
+        li {
+            max-width: 85%;
+            margin-right: 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 14px;
+            text-indent: 10px;
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+    }
+}

@@ -23,5 +23,5 @@
   </div>
 </template>
 
-<script src="./index.js"></script>
-<style lang="scss" scoped src="./index.scss"></style>
+<script src="./Blog.js"></script>
+<style lang="scss" scoped src="./Blog.scss"></style>

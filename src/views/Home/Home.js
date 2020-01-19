@@ -1,8 +1,8 @@
-import MyHeader from '@/components/common/Header/index.vue'
-import Production from '@/components/home/Production/index.vue'
-import MyFooter from '@/components/common/Footer/index.vue'
-import Banner from '@/components/home/Banner/index.vue'
-import Blog from '@/components/home/Blog/index.vue'
+import MyHeader from '@/components/common/Header/Header.vue'
+import Production from '@/components/home/Production/Production.vue'
+import MyFooter from '@/components/common/Footer/Footer.vue'
+import Banner from '@/components/home/Banner/Banner.vue'
+import Blog from '@/components/home/Blog/Blog.vue'
 
 export default {
     components: {

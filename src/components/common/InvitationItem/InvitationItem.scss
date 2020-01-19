@@ -1,0 +1,92 @@
+@import '@/assets/styles/global.scss';
+
+.invitation_container {
+    position: relative;
+    padding: 15px 15px 15px 75px;
+    border-bottom: 1px dotted #e2e2e2;
+     
+    .logo {
+        height:45px;
+        width:45px;
+        position:absolute;
+        left:18px;
+        top:12px;
+
+        img{
+            height:45px;
+            width:45px;
+        }
+    }
+
+    .first-line {
+        height:26px;
+        line-height:26px;
+        overflow:hidden;
+
+
+        .class {
+            height: 20px;
+            line-height: 20px;
+            overflow:hidden;
+            padding: 0 7px;
+            margin-right: 10px;
+            font-size: 12px;
+            border: 1px solid #5FB878;
+            background: none;
+            color: #5FB878;
+            float:left;
+        }
+
+        .title {
+          float:left;
+          padding:0;
+          height:26px !important;
+          line-height:26px;
+          overflow:hidden;
+          font-size:18px;
+          box-sizing:border-box;
+          cursor: pointer;
+          @include transition(0.35s);
+
+          &:hover {
+            color:#5FB878;
+           }
+        }
+    }
+    
+    .second-line {
+        margin-top:6px;
+        word-spacing:5px;
+        overflow:hidden;
+        display:flex;
+
+        div {
+            margin-left:3px;
+            margin-right:3px;
+            height:100%;
+            flex:1;
+        }
+
+       .author {
+           color:#999;
+       }
+
+       .date {
+           color:#999;
+       }
+
+       .desc {
+           color:#333;
+           max-width:240px;
+           height:21px;
+           
+           flex:2;
+           overflow: hidden;
+       }
+
+       .readNum {
+           float:right;
+           color:#5FB878;
+       }
+    }
+}

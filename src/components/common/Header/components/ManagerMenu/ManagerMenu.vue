@@ -16,5 +16,5 @@
   </div>
 </template>
 
-<script src="./index.js"></script>
-<style lang="scss" scoped src="./index.scss"></style>
+<script src="./ManagerMenu.js"></script>
+<style lang="scss" scoped src="./ManagerMenu.scss"></style>

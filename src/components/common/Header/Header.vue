@@ -23,5 +23,5 @@
   </Row>
 </template>
 
-<script src="./index.js"></script>
-<style lang="scss" scoped src="./index.scss"></style>
+<script src="./Header.js"></script>
+<style lang="scss" scoped src="./Header.scss"></style>

@@ -92,7 +92,7 @@ export default {
           username: username,
           password: password
         });
-
+        
         let isSuccess = this.handleVerifyData(verifyResult);
         
         if(!isSuccess) {

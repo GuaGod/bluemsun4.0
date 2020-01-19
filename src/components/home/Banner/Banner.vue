@@ -32,5 +32,5 @@
     </div>
 </template>
 
-<script src="./index.js"></script>
-<style lang="scss" scoped src="./index.scss"></style>
+<script src="./Banner.js"></script>
+<style lang="scss" scoped src="./Banner.scss"></style>
