@@ -5,9 +5,14 @@ const { mapProperty } = require('../helpers/mapProperty');
 
 let api = new API('user');
 
-function login(req) {
+function login(req, res) {
     return api.login(req.body)
-              .then(({ data }) => {
+              .then((obj) => {
+                  let data = obj.data;
+                  let headers = obj.headers;
+                  
+                  res.append('Set-Cookie', headers['set-cookie']);
+                   
                   let responseData = mapProperty(data, {
                       headUrl: 'img',
                       userId: 'stuId',
@@ -16,8 +21,10 @@ function login(req) {
                 
                   return Promise.resolve(new SuccessModel(responseData));
               }, (error) => {
+                console.log(error);
                 return Promise.resolve(new ErrorModel(error, '后端返回出错'));
               }).catch((error) => {
+                console.log(error);
                 return Promise.resolve(new ErrorModel(error, '中间层处理数据中出错'));
               })
 }

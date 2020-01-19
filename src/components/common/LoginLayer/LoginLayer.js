@@ -103,6 +103,7 @@ export default {
           username,
           password
         }).then((result) => {
+          console.log(result);
           if(!result.success) {
             this.$Message.error(result.message);
             return ;

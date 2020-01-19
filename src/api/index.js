@@ -3,6 +3,21 @@ import { mixin } from '../helpers/mixin'
 import config from './config'
 import blogAPI from './blogAPI'
 import userAPI from './userAPI'
+import qs from 'qs'
+
+axios.defaults.withCredentials = true;
+axios.defaults.headers['content-type'] = 'application/x-www-form-urlencoded';
+axios.interceptors.request.use(
+    config => {
+        if(config.method === 'post') {
+            config.data = qs.stringify(config.data);
+        }
+
+        return config;
+    }, (error) => {
+        return Promise.reject(error);
+    }
+)
 
 export default class API {
     constructor(...args) {
@@ -26,3 +41,5 @@ export default class API {
         return axios.post(url, config);
     }   
 }
+
+ 

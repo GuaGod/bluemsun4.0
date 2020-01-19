@@ -67,8 +67,12 @@ export default {
   },
 
   methods: {
-    onClickApplication() {},
-    onClickBlogs() {},
+    onClickApplication() {
+      this.$router.push('/application');
+    },
+    onClickBlogs() {
+      this.$router.push('/blog/forum');
+    },
     onClickNews() {},
     onClickProductions() {},
     onClickUserHead() {
