@@ -17,7 +17,6 @@ export default {
   },
   data() {
     return {
-      currentMenu: "UnLoginMenu",
       isCurrentMenuShow: false,
       headerState: 'active',
       isLoginLayerShow: false,
@@ -29,29 +28,33 @@ export default {
         return state.common.username;
       },
       stateCode: state => {
-        state = state.common.stateCode;
-        let currentMenu;
-        switch (stateCode) {
-          case 0:
-            currentMenu = "UnLoginMenu";
-            break;
-          case 1:
-            currentMenu = "UserMenu";
-            break;
-          case 2:
-            currentMenu = "UserMenu";
-            break;
-          default:
-            currentMenu = "UnLoginMenu";
-        }
-
-        this.currentMenu = currentMenu;
-        return state;
+        return state.common.stateCode;
       },
       headUrl: state => {
         return state.common.headUrl;
       }
-    })
+    }),
+    currentMenu() {
+      let currentMenu;
+      switch (this.stateCode) {
+        case 0:
+          currentMenu = "UnLoginMenu";
+          break;
+        case 1:
+          currentMenu = "UserMenu";
+          break;
+        case 2:
+          currentMenu = "UserMenu";
+          break;
+        case 3:
+          currentMenu = 'ManagerMenu';
+          break;
+        default:
+          currentMenu = "UnLoginMenu";
+      }
+
+      return currentMenu;
+    }
   },
   mounted: function() {
     this.headerState = this.state;
@@ -84,6 +87,12 @@ export default {
     },
     onClickCloseLoginLayer() {
       this.isLoginLayerShow = false;
+    },
+    onHandleLoginSuccess() {
+      this.isLoginLayerShow = false;
+      
+      console.log(this.username, this.stateCode, this.headUrl);
+      console.log(this.currentMenu)
     },
     bindScrollEvent() {
       function switchScroll() {

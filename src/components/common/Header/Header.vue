@@ -19,7 +19,9 @@
         </li>
       </ul>
     </Col>
-    <login-layer :is-show="isLoginLayerShow" @close="onClickCloseLoginLayer"></login-layer>
+    <login-layer :is-show="isLoginLayerShow"
+                 @close="onClickCloseLoginLayer"
+                 @login="onHandleLoginSuccess"></login-layer>
   </Row>
 </template>
 

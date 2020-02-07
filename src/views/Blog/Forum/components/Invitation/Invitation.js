@@ -49,24 +49,52 @@ export default {
  
         onChangePage(pageNum) {
             let that = this; 
+
             async function flow() {
                 that.pageNum = pageNum;
-                let data = await _getNowData();
+                let data = await that._getNowData();
                 that._handleReturnData(data);
             }
             
             flow();
         },
-        onInputSearchContent(value) {
-            console.log(value);
+
+        onClickSearch() {
+            let that = this;
+
+            async function flow() {
+                that.method = 'keyword';
+                that.value = that.searchContent;
+                that.pageNum = 1;
+                let data = await that._getNowData();
+                console.log(data);
+                that._handleReturnData(data);
+            }
+
+            flow();
         },
-        onClickSearch(value) {
-            console.log(value)
-        },
-        onClickTab(event) {
-            let { method, value } = event.target.dataset;
-            this.method = method;
-            this.value = value; 
-        },
+        onClickTab: function(tab) {
+            let tabMap = new Map([
+                ['前端', {method: 'class', value: '前端'}],
+                ['后端', {method: 'class', value: '后端'}],
+                ['热度', {method: 'hit', value: 'hit'}]
+            ])
+
+            return function(tab) {
+                let that = this;
+            
+                async function flow() {
+                    let { method, value } = tabMap.get(tab);
+                    that.method = method;
+                    that.value = value;
+                    that.pageNum = 1;
+                    
+                    let data = await that._getNowData();
+                    that._handleReturnData(data);
+                }
+    
+                flow();
+            }
+        }(),
     }
 }

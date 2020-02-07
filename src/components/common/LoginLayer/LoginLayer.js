@@ -84,6 +84,8 @@ export default {
           return ;
         }
 
+        let that = this;
+
         this.loginLock.setLock(2000);
         let username = this.username;
         let password = this.password;
@@ -103,7 +105,6 @@ export default {
           username,
           password
         }).then((result) => {
-          console.log(result);
           if(!result.success) {
             this.$Message.error(result.message);
             return ;
@@ -111,6 +112,7 @@ export default {
 
           this.$Message.info(result.message);
           this.setLoginData(result.data);
+          this.$emit('login');
         }).catch(error => {
           this.$Message.error('系统出错，请稍后重新尝试！');
         }).finally(() => {

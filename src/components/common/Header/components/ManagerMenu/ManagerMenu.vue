@@ -1,17 +1,16 @@
 <template>
   <div class="managerLoginBox">
     <div class="title">
-      <img src="${this.self.user.img}" class="head" />
-      ${this.self.user.name}
+      <img :src="headUrl" class="head" />
+      {{username}}
     </div>
     <div class="body">
-      <div id="getSelf">个人资料</div>
-      <div id="getBlogs">我的博客</div>
-
-      <div id="writeBlog">写博客</div>
-      <div id="control">控制台</div>
-      <div id="notices">通知</div>
-      <div id="quit">退出</div>
+      <div @click="onClickSelfInformation">个人资料</div>
+      <div @click="onClickSelfBlog">我的博客</div>
+      <div @click="onClickWriteBlog">写博客</div>
+      <div @click="onClickConsole">控制台</div>
+      <div @click="onClickNotice">通知</div>
+      <div @click="onClickQuit">退出</div>
     </div>
   </div>
 </template>

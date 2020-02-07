@@ -15,11 +15,12 @@ let blogAPI = {
         });
     },
     findBlogByKeyWord(data = {
-        keyword: '',
+        keyWord: '',
         pageNum: 1,
     }) {
         let url = `${baseUrl}/findBlogByKeyWord`;
-
+         
+        
         return axios.get(url, {
             params: data
         })

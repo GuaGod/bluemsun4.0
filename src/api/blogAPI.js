@@ -16,7 +16,6 @@ export default {
      * @method getTopHotList 获取点击量最高的前几位博客
      * @param { Object } data  num Number 
      */
-
     getTopHotList(data) {
         let url = `${baseUrl}/getTopHotList`;
 
@@ -27,10 +26,9 @@ export default {
 
     /**
      * @method 根据数据获取博客列表（详细）
-     * data
-     * @param {*} method    通过keyword还是blogClass获取 
-     * @param {*} value     keyword或者blogClass的值
-     * @param {*} pageNum   第几页
+     * @param { 'keyword' | 'class' | 'hit' } method    通过keyword还是class(blogClass) hit获取 
+     * @param { string } value     keyword或者blogClass hit的值
+     * @param { number } pageNum   第几页
      */
     getList(data) {
         let url = `${baseUrl}/getList`

@@ -10,12 +10,27 @@ export default {
               return state.common.headUrl;
             },
             userId: state => {
-              return state.common.userId;
+                return state.common.userId;
             }
           }),
     },
     methods: {
         onClickSelfInformation() {
+
+        },
+        onClickSelfBlog() {
+
+        },
+        onClickWriteBlog() {
+
+        },
+        onClickConsole() {
+            console.log('clickConsole')
+        },
+        onClickNotice() {
+
+        },
+        onClickQuit() {
 
         }
     }

@@ -1,7 +1,6 @@
 .container {
     margin-top: 6px;
     background: #fff;
-    min-height: 810px;
     box-shadow: 0 4px 8px rgba(7, 17, 27, 0.2);
     margin-bottom: 6px;
 
@@ -25,6 +24,18 @@
         .tab_container {
             transform: translateY(6px);
         }
+    }
+
+    .inviation_container {
+        min-height: 840px;
+    }
+
+    .invitation_none_tip {
+        height: 300px;
+        line-height: 280px;
+        text-align: center;
+        font-size: 30px;
+        color: rgba(7, 17, 27, 0.6);
     }
 
     .naviagte_container {

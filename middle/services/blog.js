@@ -27,7 +27,7 @@ function getList(data = {
             break;
         }
         case 'keyword': {
-            data.keyword = data.value;
+            data.keyWord = data.value;
             delete data.value;
             returnPromise = api.findBlogByKeyWord(data);
             break;

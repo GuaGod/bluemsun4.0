@@ -9,8 +9,6 @@ class Controller {
     login(data) {
         return loginAPI.login(data)
                 .then(({ data }) => {
-                    console.log(123)
-                    console.log(data)
                     data = data.data;
                      
                     if(data.stateCode === 0) {
@@ -26,7 +24,6 @@ class Controller {
                         data: data
                     });
                 }, (error) => {
-                    console.log(error)
                     return Promise.resolve({
                         success: false,
                         message: '服务器出错，请稍后重新尝试！',

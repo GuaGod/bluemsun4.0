@@ -20,8 +20,8 @@ const common = {
         'SET_USERNAME': (state, username) => {
             state.username = username;
         },
-        'SET_HEADURL': (state, avatorUrl) => {
-            state.avatorUrl = avatorUrl;
+        'SET_HEADURL': (state, headUrl) => {
+            state.headUrl = headUrl;
         }
     },
 

@@ -9,7 +9,7 @@ class Service {
     /**
      * 
      * @param enum{'class', 'keyword', 'hit'} method 通过keyword还是class来获取博客 
-     * @param value{ String } blogClass或者keyword的值
+     * @param value{ String } blogClass或者keyword hit的值
      * @param pageNum{ Number } 第几页
      */
     getBlog(method, value = '', pageNum = 1) {
