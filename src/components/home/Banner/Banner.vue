@@ -7,9 +7,9 @@
         </div>
         <div class="b2-con b-con" :class="current === 1 ? 'b-active' : ''">
             <div class="img img2"></div>
-            <p class="b2-title">Bluem 2019</p>
+            <p class="b2-title">Bluem 2020</p>
             <a class="b2-href">&lt; 注册成为蓝旭成员 /&gt;</a>
-            <p class="b2-content">2019 东北师范大学</p>
+            <p class="b2-content">2020 东北师范大学</p>
         </div>
         <div class="b3-con b-con" :class="current === 2 ? 'b-active' : ''">
             <div class="img img3"></div>

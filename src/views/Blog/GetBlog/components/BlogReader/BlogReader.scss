@@ -1,0 +1,45 @@
+.container {
+    overflow:auto;
+    min-height:600px;
+    padding:20px 10px 20px 10px;
+    background-color: #fff;
+    box-shadow:0 4px 8px rgba(7, 17, 27, .2);
+    position: relative;
+    width: 100%;
+
+    .base_info {
+        display:flex;
+        flex-wrap:wrap;
+        border-bottom:1px solid #eee;
+        width: 100%;
+
+        .title {
+            font-size: 24px;
+            line-height: 36px;
+            width:100%;
+        }
+    
+        .date {
+            text-align:right;
+            margin-top:3px;
+            margin-bottom:3px;
+            color:rgba(0,0,0,.5);
+            width:100%;
+        }
+    
+        .blogClass {
+            padding-left:6px;
+            padding-right:6px;
+            height:20px;
+            line-height:20px;
+            background-color:#009E94;
+            color:white;
+            border-radius:3px;
+        }
+    
+        .author {
+            width:100%;
+            text-align:right;
+        }
+    }
+}

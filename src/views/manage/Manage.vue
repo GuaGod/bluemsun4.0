@@ -3,54 +3,71 @@
         <Layout>
             <Header>
                 <Menu mode="horizontal" theme="dark" active-name="1">
-                    <div class="layout-logo"></div>
+                    <div class="layout-logo">Bluemsun</div>
                     <div class="layout-nav">
-                        <MenuItem name="1">
+                        <MenuItem name="blog">
                             <Icon type="ios-navigate"></Icon>
-                            Item 1
+                            博客区
                         </MenuItem>
-                        <MenuItem name="2">
+                        <MenuItem name="production">
                             <Icon type="ios-keypad"></Icon>
-                            Item 2
+                            作品区
                         </MenuItem>
-                        <MenuItem name="3">
+                        <MenuItem name="application">
                             <Icon type="ios-analytics"></Icon>
-                            Item 3
+                            报名
                         </MenuItem>
-                        <MenuItem name="4">
+                        <MenuItem name="register">
                             <Icon type="ios-paper"></Icon>
-                            Item 4
+                            注册
+                        </MenuItem>
+                        <MenuItem name="quit">
+                        <Icon type="ios-paper"></Icon>
+                            安全退出
                         </MenuItem>
                     </div>
                 </Menu>
             </Header>
             <Layout>
                 <Sider hide-trigger :style="{background: '#fff'}">
-                    <Menu active-name="1-2" theme="light" width="auto" :open-names="['1']">
+                    <Menu active-name="1-1" theme="light" width="auto" :open-names="['1', '2'] ">
                         <Submenu name="1">
                             <template slot="title">
                                 <Icon type="ios-navigate"></Icon>
-                                Item 1
+                                审核
                             </template>
-                            <MenuItem name="1-1">Option 1</MenuItem>
-                            <MenuItem name="1-2">Option 2</MenuItem>
-                            <MenuItem name="1-3">Option 3</MenuItem>
+                            <MenuItem name="1-1">报名审核</MenuItem>
+                            <MenuItem name="1-2">注册审核</MenuItem>
                         </Submenu>
                         <Submenu name="2">
                             <template slot="title">
                                 <Icon type="ios-keypad"></Icon>
-                                Item 2
+                                管理
                             </template>
-                            <MenuItem name="2-1">Option 1</MenuItem>
-                            <MenuItem name="2-2">Option 2</MenuItem>
+                            <MenuItem name="2-1">新闻管理</MenuItem>
+                            <MenuItem name="2-2">通知管理</MenuItem>
+                            <MenuItem name="2-2">作品管理</MenuItem>
                         </Submenu>
                         <Submenu name="3">
                             <template slot="title">
                                 <Icon type="ios-analytics"></Icon>
-                                Item 3
+                                性能监控
                             </template>
-                            <MenuItem name="3-1">Option 1</MenuItem>
-                            <MenuItem name="3-2">Option 2</MenuItem>
+                        </Submenu>
+                        <Submenu name="4">
+                            <template slot="title">
+                                <Icon type="ios-analytics"></Icon>
+                                数据分析
+                            </template>
+                        </Submenu>
+                        <Submenu name="5">
+                            <template slot="title">
+                                <Icon type="ios-analytics"></Icon>
+                                错误管理
+                            </template>
+                            <MenuItem name="5-1">前端</MenuItem>
+                            <MenuItem name="5-2">中间层</MenuItem>
+                            <MenuItem name="5-2">后端</MenuItem>
                         </Submenu>
                     </Menu>
                 </Sider>

@@ -8,6 +8,7 @@ const response = require('./middleware/response');
 
 const blogRouter = require('./routes/blog');
 const userRouter = require('./routes/user');
+const manageRouter = require('./routes/manage')
 
 let app = express();
 
@@ -20,6 +21,7 @@ app.use(response);
 
 app.use('/blog', blogRouter);
 app.use('/user', userRouter);
+app.use('/manage', manageRouter);
 
 app.use((req, res, next) => {
     next(createError(404));

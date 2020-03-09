@@ -45,6 +45,7 @@ export default {
             this.currentPage = data.pageNum;
             this.invitationArray = data.list;
             this.total = data.total;
+            console.dir(JSON.stringify(this.invitationArray))
         },
  
         onChangePage(pageNum) {

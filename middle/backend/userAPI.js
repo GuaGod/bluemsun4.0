@@ -1,10 +1,8 @@
 let base = require('./config.js');
-let axios = require('axios');
-let {transfromJ2F} = require('../helpers/transformJSON');
+let axios = require('./createAxios');
 let qs = require('qs');
-
 let baseUrl = `${base.remote}:${base.port}/user`;
-
+axios.defaults.withCredentials=true
 
 let userAPI = {
     login(data) {

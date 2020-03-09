@@ -3,6 +3,8 @@ import { mixin } from '../helpers/mixin'
 import config from './config'
 import blogAPI from './blogAPI'
 import userAPI from './userAPI'
+import manageAPI from './manageAPI'
+import performanceAPI from './performanceAPI'
 import qs from 'qs'
 
 axios.defaults.withCredentials = true;
@@ -30,6 +32,8 @@ export default class API {
        switch(apiRoute) {
            case 'blog': mixin(this, blogAPI); break;
            case 'user': mixin(this, userAPI); break;
+           case 'manage': mixin(this, manageAPI); break;
+           case 'performance': mixin(this, performanceAPI); break;
        }
     }
 

@@ -3,6 +3,7 @@ const { mixin } = require('../helpers/mixin');
 const config = require('./config');
 const blogAPI = require('./blogAPI');
 const userAPI = require('./userAPI');
+const manageAPI = require('./manageAPI');
 
 class API {
     constructor(...args) {
@@ -15,6 +16,7 @@ class API {
        switch(apiRoute) {
            case 'blog': mixin(this, blogAPI); break;
            case 'user': mixin(this, userAPI); break;
+           case 'manage': mixin(this, manageAPI); break;
        }
     }
 

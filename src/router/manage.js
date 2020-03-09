@@ -1,5 +1,5 @@
 import Manage from '../views/manage/Manage.vue'
-import New from '../views/manage/components/New/New.vue'
+import News from '../views/manage/components/News/News.vue'
 import Register from '../views/manage/components/Register/Register.vue'
 import Application from '../views/manage/components/Application/Application.vue'
 import Notice from '../views/manage/components/Notice/Notice.vue'
@@ -12,28 +12,28 @@ let routes = [
         component: Manage,
         children: [
             {
-                path: '/new',
-                name: '/new',
-                componenet: New
+                path: 'news',
+                name: 'news',
+                componenet: News
             },
             {
-                path: '/register',
-                name: '/register',
+                path: 'register',
+                name: 'register',
                 component: Register
             },
             {
-                path: '/notice',
-                name: '/notice',
+                path: 'notice',
+                name: 'notice',
                 component: Notice
             },
             {
-                path: '/application',
-                name: '/application',
+                path: 'application',
+                name: 'application',
                 component: Application
             },
             {
-                path: '/production',
-                name: '/production',
+                path: 'production',
+                name: 'production',
                 component: Production
             }
         ]

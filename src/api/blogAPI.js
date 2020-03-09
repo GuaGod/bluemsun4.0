@@ -36,5 +36,55 @@ export default {
         return axios.get(url, {
             params: data 
         })
+    },
+
+    /**
+     * @method 根据博客id获取博客详细信息
+     * @param { number } id 博客的id号
+     */
+     getBlog(id) {
+         let url = `${baseUrl}/getBlog`
+
+         return axios.get(url, {
+             params: {
+                 id: id
+             }
+         });
+     },
+
+     /**
+      * @method 根据博客id获取博客的评论
+      * @param { object: {id: number, pageNum: number} } data 博客id以及第几页评论 
+      */
+    getBlogComment(data) {
+        let url = `${baseUrl}/getBlogComment`
+
+        return axios.get(url, {
+            params: data
+        });
+    },
+
+    /**
+     * @method 获取子评论
+     * @param { object: {commentId: number, pageNum: number}} data 父博客id
+     */
+    getCommentChildren(data) {
+        let url = `${baseUrl}/getCommentChildren`;
+
+        return axios.get(url, {
+            params: data
+        })
+    },
+
+    replyBlog(data) {
+        let url = `${baseUrl}/replyBlog`;
+
+        return axios.post(url, data)
+    },
+
+    replyComment(data) {
+        let url = `${baseUrl}/replyComment`;
+
+        return axios.post(url, data);
     }
 }

@@ -2,16 +2,16 @@
   <li class="invitation_container">
     <div class="logo">
       <router-link to="./myBlogs.html?userId=${data.list[i].userId}">
-        <img src="${configBase.url}/${data.list[i].img}" />
+        <img :src="invitation.headUrl" />
       </router-link>
     </div>
     <div class="first-line">
       <div class="class">{{invitation.blogClass}}</div>
-      <a
+      <router-link
         class="title"
-        href="./blogDetail.html?id=${list[i].articleId}"
+        :to="'./getBlog/' + invitation.blogId"
         target="_blank"
-      >{{invitation.title}}</a>
+      >{{invitation.title}}</router-link>
     </div>
     <div class="second-line">
       <div class="author">{{invitation.username}}</div>
