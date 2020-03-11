@@ -1,6 +1,9 @@
 # bluem4.0
 
 ## 说明
+middle 存放的是node中间层
+src 存放的是vue项目
+
 详细文档，请看doc目录
 
 ## 项目安装
