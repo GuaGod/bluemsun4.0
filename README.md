@@ -1,5 +1,8 @@
 # bluem4.0
 
+## 说明
+详细文档，请看doc目录
+
 ## 项目安装
 在根目录下 npm install    （前端系统）
 在middle目录下 npm install (node中间层系统)
