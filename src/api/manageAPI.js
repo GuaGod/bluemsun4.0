@@ -45,9 +45,43 @@ export default {
             params: data
         })
     },
+    getApplicationDetail(data) {
+        let url = `${baseUrl}/getApplicationDetail`;
+
+        return axios.get(url, {
+            params: data
+        })
+    },
+    openApplication() {
+        let url = `${baseUrl}/operationApplication`;
+
+        return axios.get(url, {
+            params: {
+                operation: 1
+            }
+        })
+    },
+    closeApplication() {
+        let url = `${baseUrl}/operationApplication`;
+
+        return axios.get(url, {
+            params: {
+                operation: 0
+            }
+        })
+    },
     getNewsList(data) {
         let url = `${baseUrl}/getNewsList`;
 
+        data.newsClass = 'news';
+        return axios.get(url, {
+            params: data
+        })
+    },
+    getNoticeList(data) {
+        let url = `${baseUrl}/getNewsList`;
+
+        data.newsClass = 'notice'
         return axios.get(url, {
             params: data
         })

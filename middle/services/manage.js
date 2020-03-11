@@ -103,6 +103,10 @@ function getProductionList(data) {
                     })
 }
 
+function getProductionDetail(data) {
+
+}
+
 function getApplicationList(data) {
     return manageAPI.findPageSignUp(data)
                     .then(({ data }) => {
@@ -131,8 +135,35 @@ function getApplicationList(data) {
                     })    
 }
 
+function getApplicationDetail(data) {
+    return manageAPI.getApplicantDetail(data)
+                    .then(({ data }) => {
+                        data.photo = `${config.imgRemoteBase}/${data.photo}`;
+
+                        return Promise.resolve(new SuccessModel(data));
+                    }, (error) => {
+                        return Promise.resolve(new ErrorModel(error, '后端返回出错'));
+                    }).catch((error) => {
+                        return Promise.resolve(new ErrorModel(error, '中间层处理数据中出错'));
+                    })
+}
+
+function operationApplication(data) {
+    return manageAPI.openSignUp(data)
+                    .then(({ data }) => {
+                        let message = data.message;
+                        delete data.message;
+
+                        return Promise.resolve(new SuccessModel(data, message));
+                    }, (error) => {
+                        return Promise.resolve(new ErrorModel(error, '后端返回出错'));
+                    }).catch((error) => {
+                        return Promise.resolve(new ErrorModel(error, '中间层处理数据中出错'));
+                    })
+}
+
 function getNewsList(data) {
-    return manageAPI.findPageSignUp(data)
+    return manageAPI.findNewsPageByDate(data)
                     .then(({ data }) => {
                         let responseData = mapProperty(data, {
                             total: 'total',
@@ -156,12 +187,20 @@ function getNewsList(data) {
                     })       
 }
 
+function getNewsDetail() {
+
+}
+
 module.exports = {
     getRegisterList,
     passRegister,
     rejectRegister,
     getRegisterDetail,
     getProductionList,
+    getProductionDetail,
     getApplicationList,
-    getNewsList
+    getApplicationDetail,
+    operationApplication,
+    getNewsList,
+    getNewsDetail,
 }

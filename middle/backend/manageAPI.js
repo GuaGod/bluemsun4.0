@@ -12,6 +12,20 @@ let manageAPI = {
             params: data
         });
     },
+    getApplicantDetail(data) {
+        let url = `${baseUrl}/DoRegister/getApplicantDetail`;
+
+        return axios.get(url, {
+            params: data
+        })
+    },
+    openSignUp(data) {
+        let url = `${baseUrl}/DoRegister/openSignUp`;
+
+        return axios.get(url, {
+            params: data
+        })
+    },
     findPageRegister(data) {
         let url = `${baseUrl}/DoRegister/findPageRegister`;
 

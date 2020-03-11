@@ -5,10 +5,15 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('./middleware/cors');
 const response = require('./middleware/response');
+const { autoLogin } = require('./helpers/autoLogin.js')
 
 const blogRouter = require('./routes/blog');
 const userRouter = require('./routes/user');
 const manageRouter = require('./routes/manage')
+
+if(process.env.NODE_ENV === 'dev') {
+    autoLogin(process.env.cookie);
+}
 
 let app = express();
 

@@ -1,0 +1,16 @@
+.table_container {
+    height: 300px;
+}
+
+.operation_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.page_container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}

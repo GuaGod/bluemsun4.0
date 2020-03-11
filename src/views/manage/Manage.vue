@@ -30,44 +30,46 @@
             </Header>
             <Layout>
                 <Sider hide-trigger :style="{background: '#fff'}">
-                    <Menu active-name="1-1" theme="light" width="auto" :open-names="['1', '2'] ">
-                        <Submenu name="1">
+                    <Menu active-name="examine" theme="light" width="auto" :open-names="['examine', 'manage'] " @on-select="onSelectMenu">
+                        <Submenu name="examine">
                             <template slot="title">
                                 <Icon type="ios-navigate"></Icon>
                                 审核
                             </template>
-                            <MenuItem name="1-1">报名审核</MenuItem>
-                            <MenuItem name="1-2">注册审核</MenuItem>
+                            <MenuItem name="application">报名审核</MenuItem>
+                            <MenuItem name="register">注册审核</MenuItem>
                         </Submenu>
-                        <Submenu name="2">
+                        <Submenu name="manage">
                             <template slot="title">
                                 <Icon type="ios-keypad"></Icon>
                                 管理
                             </template>
-                            <MenuItem name="2-1">新闻管理</MenuItem>
-                            <MenuItem name="2-2">通知管理</MenuItem>
-                            <MenuItem name="2-2">作品管理</MenuItem>
+                            <MenuItem name="news">新闻管理</MenuItem>
+                            <MenuItem name="notice">通知管理</MenuItem>
+                            <MenuItem name="production">作品管理</MenuItem>
                         </Submenu>
-                        <Submenu name="3">
+                        <Submenu name="monitor">
                             <template slot="title">
                                 <Icon type="ios-analytics"></Icon>
-                                性能监控
+                                监控
                             </template>
+                            <MenuItem name="performance">性能监控</MenuItem>
                         </Submenu>
-                        <Submenu name="4">
+                        <Submenu name="analyse" @on-select="onSelectMenu">
                             <template slot="title">
                                 <Icon type="ios-analytics"></Icon>
-                                数据分析
+                                分析
                             </template>
+                            <MenuItem name="data">数据分析</MenuItem>
                         </Submenu>
-                        <Submenu name="5">
+                        <Submenu name="error">
                             <template slot="title">
                                 <Icon type="ios-analytics"></Icon>
                                 错误管理
                             </template>
-                            <MenuItem name="5-1">前端</MenuItem>
-                            <MenuItem name="5-2">中间层</MenuItem>
-                            <MenuItem name="5-2">后端</MenuItem>
+                            <MenuItem name="front">前端</MenuItem>
+                            <MenuItem name="middle">中间层</MenuItem>
+                            <MenuItem name="back">后端</MenuItem>
                         </Submenu>
                     </Menu>
                 </Sider>

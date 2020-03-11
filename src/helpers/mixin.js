@@ -15,6 +15,6 @@ function mixin(base, ...objs) {
     }
 }
 
-module.exports = {
+export {
     mixin
 }

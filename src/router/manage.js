@@ -4,7 +4,8 @@ import Register from '../views/manage/components/Register/Register.vue'
 import Application from '../views/manage/components/Application/Application.vue'
 import Notice from '../views/manage/components/Notice/Notice.vue'
 import Production from '../views/manage/components/Production/Production.vue'
-
+console.log(News);
+console.log(Notice);
 let routes = [
     {
         path: '/manage',
@@ -13,27 +14,27 @@ let routes = [
         children: [
             {
                 path: 'news',
-                name: 'news',
-                componenet: News
+                name: 'newsManage',
+                component: News
             },
             {
                 path: 'register',
-                name: 'register',
+                name: 'registerManage',
                 component: Register
             },
             {
                 path: 'notice',
-                name: 'notice',
+                name: 'noticeManage',
                 component: Notice
             },
             {
                 path: 'application',
-                name: 'application',
+                name: 'applicationManage',
                 component: Application
             },
             {
                 path: 'production',
-                name: 'production',
+                name: 'productionManage',
                 component: Production
             }
         ]
