@@ -22,8 +22,7 @@ let blogAPI = {
         pageNum: 1,
     }) {
         let url = `${baseUrl}/findBlogByKeyWord`;
-         
-        
+
         return axios.get(url, {
             params: data
         })
@@ -34,7 +33,7 @@ let blogAPI = {
         pageNum: 1,
     }) {
         let url = `${baseUrl}/findBlogByBlogClass`;
- 
+
         return axios.get(url, {
             params: data
         })
@@ -47,7 +46,7 @@ let blogAPI = {
             params: data
         })
     },
-    
+
     getComment(data) {
         let url = `${base.remote}:${base.port}/comment/getComment`;
         
@@ -55,7 +54,7 @@ let blogAPI = {
             params: data
         })
     },
-    
+
     getCommentChildren(data) {
         let url = `${base.remote}:${base.port}/comment/findPageReply`;
 

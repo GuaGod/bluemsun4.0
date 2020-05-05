@@ -31,7 +31,7 @@ let routes = [
 
 function createRoutes(baseUrl, routes) {
     routes = addBaseUrl(baseUrl, routes);
-    
+
     return routes;
 }
 

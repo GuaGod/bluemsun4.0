@@ -2,10 +2,10 @@
   "name": "middle",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "./src/app.js",
   "scripts": {
-    "start": "cross NODE_ENV=serve nodemon ./bin/www.js",
-    "dev": "cross-env NODE_ENV=dev cookie=7F66C1BAFEE0164120CD67CF4F15A637 nodemon ./bin/www.js"
+    "start": "cross NODE_ENV=serve nodemon ./src/bin/www.js",
+    "dev": "cross-env NODE_ENV=dev nodemon ./src/bin/www.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,8 +15,10 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "babel-polyfill": "^6.26.0",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
     "mongoose": "^5.9.3",
     "morgan": "^1.9.1"
   }

@@ -1,6 +1,5 @@
 const createError = require('http-errors');
 const express = require('express');
-const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('./middleware/cors');
@@ -12,7 +11,7 @@ const userRouter = require('./routes/user');
 const manageRouter = require('./routes/manage')
 
 if(process.env.NODE_ENV === 'dev') {
-    autoLogin(process.env.cookie);
+    autoLogin();
 }
 
 let app = express();

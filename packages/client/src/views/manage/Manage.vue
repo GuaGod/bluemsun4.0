@@ -3,7 +3,7 @@
         <Layout>
             <Header>
                 <Menu mode="horizontal" theme="dark" active-name="1">
-                    <div class="layout-logo">Bluemsun</div>
+                    <div class="layout-logo"><router-link to="/" class="home-link">Bluemsun</router-link></div>
                     <div class="layout-nav">
                         <MenuItem name="blog">
                             <Icon type="ios-navigate"></Icon>

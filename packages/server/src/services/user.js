@@ -13,13 +13,13 @@ function login(req, res) {
                   let headers = obj.headers;
                   axios.defaults.headers.common['Cookie'] = headers['set-cookie'][0].split(';')[0];
                   res.append('Set-Cookie', headers['set-cookie']);
-                   
+
                   let responseData = mapProperty(data, {
                       headUrl: 'img',
                       userId: 'stuId',
                       username: 'name',
                   })
-                
+
                   return Promise.resolve(new SuccessModel(responseData));
               }, (error) => {
                 console.log(error);

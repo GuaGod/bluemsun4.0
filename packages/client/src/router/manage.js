@@ -4,8 +4,7 @@ import Register from '../views/manage/components/Register/Register.vue'
 import Application from '../views/manage/components/Application/Application.vue'
 import Notice from '../views/manage/components/Notice/Notice.vue'
 import Production from '../views/manage/components/Production/Production.vue'
-console.log(News);
-console.log(Notice);
+
 let routes = [
     {
         path: '/manage',
