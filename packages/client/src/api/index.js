@@ -26,7 +26,7 @@ export default class API {
        this.baseUrl = config.remote;
        for(let i = 0, length = args.length; i < length; i++) {
            this.baseUrl += '/' + args[i];
-       }     
+       }
 
        let apiRoute = args[0];
        switch(apiRoute) {
@@ -43,7 +43,5 @@ export default class API {
 
     post(url, config) {
         return axios.post(url, config);
-    }   
+    }
 }
-
- 

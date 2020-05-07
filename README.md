@@ -8,10 +8,10 @@ client 存放的是vue项目
 详细文档，请看doc目录
 
 ## 项目安装
-在根目录下 yarn run download即可安装
+在根目录下 npm run download即可安装
 
 ## 项目运行
-yarn run dev
+npm run dev
 
 ## 项目打包
-yarn run build
+npm run build

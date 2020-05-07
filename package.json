@@ -12,7 +12,7 @@
     "download:client": "cd ./packages/client && npm install",
     "download:server": "cd ./packages/server && npm install",
     "dev:client": "cd packages/client && npm run dev",
-    "dev:server": "cd packages/server && npm run dev",
+    "dev:server": "cd packages/server && npm run de·v",
     "build:client": "cd packages/client && npm run build",
     "build:server": "cd packages/server && npm run build"
   },

@@ -3,7 +3,7 @@ let axios = require('./createAxios');
 let baseUrl = `${base.remote}:${base.port}/blog`;
 let qs = require('qs');
 
-axios.defaults.withCredentials=true
+axios.defaults.withCredential = true
 
 let blogAPI = {
     findPageBlogByHit(data = {
@@ -49,7 +49,7 @@ let blogAPI = {
 
     getComment(data) {
         let url = `${base.remote}:${base.port}/comment/getComment`;
-        
+
         return axios.get(url, {
             params: data
         })
@@ -65,7 +65,7 @@ let blogAPI = {
 
     addComment(data) {
         let url = `${base.remote}:${base.port}/comment/addComment`;
-        
+
         return axios.post(url, data)
     },
 
